@@ -1,0 +1,24 @@
+.DS_Store
+.cursor/
+
+# dependencies & build
+node_modules/
+dist/
+.next/
+out/
+build/
+coverage/
+
+# env / secrets
+.env
+.env.*
+!.env.example
+
+# local data & uploads
+backend/data/
+backend/uploads/
+
+# misc
+*.tsbuildinfo
+*.pem
+.vercel/

@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafb;
+  --foreground: #1a2b33;
+  --primary: #1f4e5f;
+  --accent: #2e86ab;
+  --accent-soft: #e8f4f8;
+  --success: #2e7d32;
+  --warning: #f57c00;
+  --error: #c62828;
+  --muted: #6b7c85;
+  --border: #e2e8ec;
+  --star: #ffb800;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-star: var(--star);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.rdp-theme {
+  --rdp-accent-color: var(--accent);
+  --rdp-accent-background-color: var(--accent-soft);
+  --rdp-day-height: 40px;
+  --rdp-day-width: 40px;
+  --rdp-selected-border: 2px solid var(--accent);
+}
+
+.rdp-theme .rdp-day_button:hover {
+  background: var(--accent-soft);
+}
+
+.rdp-theme .rdp-selected .rdp-day_button {
+  background: var(--accent);
+  color: white;
+}
+
+.rdp-theme .rdp-range_start .rdp-day_button,
+.rdp-theme .rdp-range_end .rdp-day_button {
+  background: var(--accent);
+  color: white;
+}
+
+.rdp-theme .rdp-range_middle {
+  background: var(--accent-soft);
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: linear-gradient(
+      90deg,
+      #e8f4f8 0%,
+      #f8fafb 20%,
+      #f8fafb 80%,
+      #e8f4f8 100%
+    );
+  }
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.pb-nav {
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0));
+}
+
+.pb-action {
+  padding-bottom: calc(10.75rem + env(safe-area-inset-bottom, 0));
+}
+
+.scroll-area {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--accent-soft);
+}
+
+.scroll-area-visible {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+.scroll-area::-webkit-scrollbar {
+  width: 8px;
+  -webkit-appearance: none;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: var(--accent-soft);
+  border-radius: 999px;
+  margin: 4px 0;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 999px;
+  border: 2px solid var(--accent-soft);
+  min-height: 32px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--border) 0%,
+    var(--accent-soft) 45%,
+    #f0f9fc 55%,
+    var(--border) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.35s ease-out both;
+}

@@ -1,0 +1,177 @@
+{
+  "pass": 34,
+  "fail": [],
+  "warn": [],
+  "all": [
+    {
+      "status": "PASS",
+      "name": "GET /health",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Customer login",
+      "detail": "12b05227"
+    },
+    {
+      "status": "PASS",
+      "name": "Pro login",
+      "detail": "c88191a1"
+    },
+    {
+      "status": "PASS",
+      "name": "Customer cannot login as professional",
+      "detail": "status 400"
+    },
+    {
+      "status": "PASS",
+      "name": "GET /services",
+      "detail": "7 items"
+    },
+    {
+      "status": "PASS",
+      "name": "GET /professionals/:userId",
+      "detail": "Jamshid Karimov"
+    },
+    {
+      "status": "PASS",
+      "name": "POST /orders",
+      "detail": "status=pending"
+    },
+    {
+      "status": "PASS",
+      "name": "Order clientId matches customer",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Order masterId matches pro userId",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Pro got new-order notification",
+      "detail": "Yangi buyurtma!"
+    },
+    {
+      "status": "PASS",
+      "name": "POST /payments (mock)",
+      "detail": "ok"
+    },
+    {
+      "status": "PASS",
+      "name": "Customer send message",
+      "detail": "customer"
+    },
+    {
+      "status": "PASS",
+      "name": "Message sender.role = customer",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Pro send message",
+      "detail": "professional"
+    },
+    {
+      "status": "PASS",
+      "name": "Message sender.role = professional",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "GET messages",
+      "detail": "2 msgs"
+    },
+    {
+      "status": "PASS",
+      "name": "Customer got chat notification",
+      "detail": "Ustadan yangi xabar"
+    },
+    {
+      "status": "PASS",
+      "name": "Pro accept order",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Customer notified of accept",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Customer cancel after accepted",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Customer cannot cancel in_progress",
+      "detail": "status 400"
+    },
+    {
+      "status": "PASS",
+      "name": "Chat open during in_progress",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Pro complete order",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Chat closed after completed",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Customer leave review",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Double review blocked",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Pro decline with reason",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "accepted → completed skip allowed (by design)",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "pending → on_the_way blocked",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Customer cannot accept own order as master",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Customer cancel pending",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Pro cancel after accepted",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Express fee +15000 applied",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "name": "Dashboard",
+      "detail": "pending=1"
+    }
+  ]
+}
