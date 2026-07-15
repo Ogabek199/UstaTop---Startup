@@ -45,34 +45,3 @@ cd mobile
 npm install
 npx expo start
 ```
-
-## Sizdan kerak bo'ladigan narsalar
-
-| Narsa | Qachon kerak | Qayerdan olish |
-|-------|--------------|----------------|
-| Supabase loyiha | **Hozir** | [supabase.com](https://supabase.com) |
-| Payme sandbox | To'lov bosqichida | payme.uz merchant |
-| Click sandbox | To'lov bosqichida | click.uz |
-| Eskiz.uz SMS | Production OTP | eskiz.uz |
-| Yandex Maps API | Manzil xaritasi | developer.tech.yandex.ru |
-| FCM | Mobile push | Firebase Console |
-
-Hozircha barcha integratsiyalar **mock** rejimda ishlaydi.
-
-## Autentifikatsiya
-
-| Holat | Oqim |
-|-------|------|
-| **Birinchi marta** | Ro'yxatdan o'tish → OTP → parol o'rnatish |
-| **Keyingi kirishlar** | Kirish → telefon + parol |
-
-Test hisoblar uchun seed parol: `123456` (seed ishga tushirilgandan keyin)
-
-```bash
-cd backend && npm run prisma:seed
-```
-
-| Rol | Telefon | Parol |
-|-----|---------|-------|
-| Mijoz | +998909876543 | 123456 |
-| Usta | +998901234567 | 123456 |
